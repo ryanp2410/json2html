@@ -7,7 +7,7 @@ $json =
         "attr": {
             "class": "container"
         },
-        "child": {
+        "value": {
             "tag": "p",
             "attr": {
                 "class": "text",
@@ -20,7 +20,7 @@ $json =
 
 /*$json = $_POST["input"];*/
 $data = json_decode($json, true);
-
+var_dump($data);
 function iterate($stuff) {
     foreach ($stuff as $object) {
         foreach ($object as $key => $value) {
@@ -56,5 +56,3 @@ function getValue($key) {
     }
     return false;
 }
-
-iterate($data);
